@@ -8,6 +8,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class UserAppApplication {
     
+    /**
+     * run with jvm arg: -javaagent:/Users/admin/Desktop/shenyu-client-agent/shenyu-agent/target/shenyu-agent-1.0.0-SNAPSHOT.jar
+     */
     public static void main(String[] args) {
         ConfigurableApplicationContext[] contexts = JVMTI.getInstances(ConfigurableApplicationContext.class);
         System.out.println("before run->" + contexts.length);

@@ -20,6 +20,14 @@ public class JVMTI {
         }
     }
     
+    public static <T> T getInstance(Class<T> klass) {
+        final T[] instances = getInstances0(klass, 1);
+        if (null == instances || instances.length == 0) {
+            return null;
+        }
+        return instances[0];
+    }
+    
     public static <T> T[] getInstances(Class<T> klass) {
         return getInstances0(klass, -1);
     }
