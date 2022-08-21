@@ -3,6 +3,7 @@ package org.apache.shenyu.jvmti;
 import org.scijava.nativelib.NativeLoader;
 
 import java.io.IOException;
+import java.rmi.UnexpectedException;
 
 /**
  * @author HaiLang
@@ -24,6 +25,9 @@ public class JVMTI {
         final T[] instances = getInstances0(klass, 1);
         if (null == instances || instances.length == 0) {
             return null;
+        }
+        if (instances.length > 1) {
+            throw new RuntimeException("expect find only one instance, but actually find many instances !");
         }
         return instances[0];
     }
