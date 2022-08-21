@@ -12,7 +12,7 @@ public class JVMTITest {
     private static class TestClass {
     }
     
-    @Test
+//    @Test
     public void testGetInstances() {
         TestClass[] instances = JVMTI.getInstances(TestClass.class);
         Assert.assertNotNull(instances);
