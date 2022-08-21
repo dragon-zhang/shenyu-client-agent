@@ -24,10 +24,6 @@
             <groupId>org.example</groupId>
             <artifactId>shenyu-client-springmvc-annotation</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>shenyu-jvmti</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
