@@ -15,7 +15,6 @@ public class ShenyuClientAgent {
         //这里新启动一个线程是为了不阻塞主线程，可以考虑动态attach
         new Thread(() -> {
             ConfigurableApplicationContext context = JVMTI.getInstance(ConfigurableApplicationContext.class);
-            System.out.println("first " + context);
             while (null == context) {
                 try {
                     Thread.sleep(1000);

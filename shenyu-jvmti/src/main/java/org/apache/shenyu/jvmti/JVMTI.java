@@ -1,9 +1,9 @@
 package org.apache.shenyu.jvmti;
 
+import org.scijava.nativelib.JniExtractor;
 import org.scijava.nativelib.NativeLoader;
 
-import java.io.IOException;
-import java.rmi.UnexpectedException;
+import java.io.File;
 
 /**
  * @author HaiLang
@@ -15,9 +15,17 @@ public class JVMTI {
     
     static {
         try {
-            NativeLoader.loadLibrary(LIB_NAME);
-        } catch (IOException e) {
-            e.printStackTrace();
+            final JniExtractor extractor = NativeLoader.getJniExtractor();
+            final String path = extractor.extractJni("", LIB_NAME).getAbsolutePath();
+            System.load(path);
+        } catch (Throwable ignored) {
+            try {
+                File path = new File(JVMTI.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+                String libPath = new File(path, JVMTIUtils.detectLibName()).getAbsolutePath();
+                System.load(libPath);
+            } catch (Throwable t) {
+                t.printStackTrace();
+            }
         }
     }
     
