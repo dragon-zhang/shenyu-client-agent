@@ -9,13 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shenyu-agent-use-jvmti</artifactId>
+    <artifactId>shenyu-agent-unuse-jvmti</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>shenyu-client-springmvc-config</artifactId>
@@ -31,8 +27,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Premain-Class>org.apache.shenyu.agent.ShenyuClientAgent</Premain-Class>
-                            <Agent-Class>org.apache.shenyu.agent.ShenyuClientAgent</Agent-Class>
+                            <Premain-Class>org.apache.shenyu.agent.ShenyuClientAgent2</Premain-Class>
+                            <Agent-Class>org.apache.shenyu.agent.ShenyuClientAgent2</Agent-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                             <Can-Set-Native-Method-Prefix>true</Can-Set-Native-Method-Prefix>

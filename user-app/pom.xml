@@ -22,7 +22,7 @@
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>shenyu-client-springmvc-annotation</artifactId>
+            <artifactId>shenyu-client-springmvc-config</artifactId>
         </dependency>
 
         <dependency>
