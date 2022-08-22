@@ -29,6 +29,7 @@ public class ShenyuClientAgent {
                 }
             }
             System.out.println("finally available context " + context);
+            //todo 在这里实现组装逻辑
         }).start();
     }
 }
