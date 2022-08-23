@@ -7,7 +7,7 @@
         <artifactId>shenyu-client-agent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>user-app</artifactId>
+    <artifactId>client-app</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
@@ -17,14 +17,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>shenyu-client-springmvc-config</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

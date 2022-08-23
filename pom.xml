@@ -20,6 +20,7 @@
         <module>shenyu-jvmti</module>
         <module>shenyu-agent-use-jvmti</module>
         <module>shenyu-agent-unuse-jvmti</module>
+        <module>client-app</module>
     </modules>
 
     <properties>
